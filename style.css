@@ -13,11 +13,12 @@ a:visited {
 }
 
 a:hover {
-  text-shadow: 2px 2px gray;
+  text-shadow: 2px 2px lightgray;
 }
 
 #goal {
   font-size: 1.1em;
+  line-height: 1.2em;
   font-style: italic;
 }
 
