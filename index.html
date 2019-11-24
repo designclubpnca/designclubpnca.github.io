@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Design Club PNCA</title>
+  </head>
+  <body>
+    <header>
+      <h1>Design Club</h1>
+      <h3 id="date"></h3>
+    </header>
+    <h2>The Goal:</h2>
+    <p><em>Make experimental & meaningful work that you are proud of, build skills, get faster at ideating, iterating, and executing, have fun😊, and build community.</em></p>
+
+    <h2>Links:</h2>
+    <ul>
+      <li><a href="https://drive.google.com/drive/folders/18pgXJmV15LWjlwVGB_pTOF65qzLZ6LQ3?usp=sharing">Upload your work here</a></li>
+      <li><a href="https://open.spotify.com/playlist/3DpitXPBaVy5zvKSc3cQQ5?si=MwJZevv6SG6N21siyIBdZg">Collaborative Spotify playlist</a></li>
+      <li><a href="https://docs.google.com/document/d/1yjW_9MsSm5EqkQAc5MUFkdAhWQSok8Hqk827Be5DZ0M/edit?usp=sharing">Resources</a></li>
+    </ul>
+  </body>
+  <script type="text/javascript">
+    let dt = new Date();
+    document.getElementById("date").innerHTML = (("0"+(dt.getMonth()+1)).slice(-2)) +"/"+ (("0"+dt.getDate()).slice(-2)) +"/"+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()+1).slice(-2)) +":"+ (("0"+dt.getMinutes()+1).slice(-2));
+  </script>
+</html>
