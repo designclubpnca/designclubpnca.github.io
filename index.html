@@ -8,30 +8,46 @@
   <body>
     <header>
       <h1>Design Club</h1>
-      <h3 id="ct"></h3>
+      <p><b>The goal:</b> <em>Make experimental & meaningful work that you are proud of, build skills, get faster at ideating, iterating, and executing, have fun, and build community.</em></p>
     </header>
-    <h2>The Goal:</h2>
-    <p><em>Make experimental & meaningful work that you are proud of, build skills, get faster at ideating, iterating, and executing, have fun😊, and build community.</em></p>
+    <main>
+      <h2>Links:</h2>
+      <ul>
+        <li><h2><a href="https://drive.google.com/drive/folders/18pgXJmV15LWjlwVGB_pTOF65qzLZ6LQ3?usp=sharing">Upload your work here</a></h2></li>
+        <li><h2><a href="https://open.spotify.com/playlist/3DpitXPBaVy5zvKSc3cQQ5?si=MwJZevv6SG6N21siyIBdZg">Collaborative Spotify playlist</a></h2></li>
+        <li><h2><a href="https://docs.google.com/document/d/1yjW_9MsSm5EqkQAc5MUFkdAhWQSok8Hqk827Be5DZ0M/edit?usp=sharing">Resources</a></h2></li>
+        <li><h2><a href="https://www.instagram.com/designclubpnca/">Club Instagram</a></h2></li>
+      </ul>
+    </main>
 
-    <h2>Links:</h2>
-    <ul>
-      <li><a href="https://drive.google.com/drive/folders/18pgXJmV15LWjlwVGB_pTOF65qzLZ6LQ3?usp=sharing">Upload your work here</a></li>
-      <li><a href="https://open.spotify.com/playlist/3DpitXPBaVy5zvKSc3cQQ5?si=MwJZevv6SG6N21siyIBdZg">Collaborative Spotify playlist</a></li>
-      <li><a href="https://docs.google.com/document/d/1yjW_9MsSm5EqkQAc5MUFkdAhWQSok8Hqk827Be5DZ0M/edit?usp=sharing">Resources</a></li>
-    </ul>
+
+    <footer>
+      <h1 id="clockbox"></h1>
+    </footer>
   </body>
-  <script type="text/javascript">
-  function display_c(){
-var refresh=1000; // Refresh rate in milli seconds
-mytime=setTimeout('display_ct()',refresh)
-}
 
-function display_ct() {
-var x = new Date()
-var x1=x.getMonth() + 1+ "/" + x.getDate() + "/" + x.getYear();
-x1 = x1 + " - " +  x.getHours( )+ ":" +  x.getMinutes() + ":" +  x.getSeconds();
-document.getElementById('ct').innerHTML = x1;
-display_c();
- }
+  <script type="text/javascript">
+  var tday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+  function GetClock(){
+  var d=new Date();
+  var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+  var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
+
+  if(nhour==0){ap=" AM";nhour=12;}
+  else if(nhour<12){ap=" AM";}
+  else if(nhour==12){ap=" PM";}
+  else if(nhour>12){ap=" PM";nhour-=12;}
+
+  if(nmin<=9) nmin="0"+nmin;
+  if(nsec<=9) nsec="0"+nsec;
+
+  var clocktext=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+ap+"";
+  document.getElementById('clockbox').innerHTML=clocktext;
+  }
+
+  GetClock();
+  setInterval(GetClock,1000);
   </script>
 </html>
