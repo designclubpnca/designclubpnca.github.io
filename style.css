@@ -16,6 +16,10 @@ a:hover {
   text-shadow: 2px 2px lightgray;
 }
 
+ul {
+  padding-left: 0px;
+}
+
 #goal {
   font-size: 1.1em;
   line-height: 1.2em;
