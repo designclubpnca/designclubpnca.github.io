@@ -1,14 +1,25 @@
+@font-face {
+  font-family: 'lunchtype25';
+  src: url('assets/fonts/lunchtype25-regular_condensed-webfont.eot'); /* IE9 Compat Modes */
+  src: url('assets/fonts/lunchtype25-regular_condensed-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('assets/fonts/lunchtype25-regular_condensed-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('assets/fonts/lunchtype25-regular_condensed-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('assets/fonts/lunchtype25-regular_condensed-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('assets/fonts/lunchtype25-regular_condensed-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
 html {
   height: 100vh;
   width: 100vw;
 }
 
 body {
-  font-family: courier, monospace;
+  font-family: 'lunchtype25', Helvetica, sans-serif;
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
   font-size: 1.3em;
+  background: darkgrey;
 }
 
 #title {
@@ -42,11 +53,6 @@ ul {
 li {
   margin-bottom: 5px;
   line-height: 1.5em;
-}
-
-li a {
-
-  border-bottom: 2px dashed blue;
 }
 
 #goal {
