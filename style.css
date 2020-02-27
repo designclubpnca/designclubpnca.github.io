@@ -25,13 +25,17 @@ body {
 }
 
 #title {
-  font-size: 3em;
+  font-size: 2em;
   margin: 10px 0;
   display: inline;
 }
 
 header img {
-display: inline;
+  display: inline;
+}
+
+p {
+  max-width: 400px;
 }
 
 a {
@@ -67,4 +71,14 @@ li {
 footer{
   position: fixed;
   bottom: 0;
+}
+
+footer p {
+  max-width: 300px;
+}
+
+@media screen and (min-width: 500px) {
+  footer p {
+    max-width: none;
+  }
 }
